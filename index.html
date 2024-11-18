@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accueil - Basketball Challenge</title>
+  
+  <!-- Liens vers les fichiers CSS -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/mobile-nav.css">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/slideshow.css">
+</head>
+<body>
+  <!-- Header -->
+  <script src="Js/header.js"></script>
+  
+  <!-- Contenu principal -->
+  <div class="container">
+    <h1 class="titre-intro">Bienvenue sur Basketball Challenge</h1>
+    <p class="text-intro">
+      Vous êtes connecté ! Profitez des fonctionnalités pour créer et rejoindre des équipes, participer aux challenges, et bien plus encore.
+    </p>
+    
+    <!-- Liste des équipes liées à l'utilisateur -->
+    <h3>Mes Équipes</h3>
+    <div id="slideshowContainer" class="slideshow-container">
+      <div id="slidesContainer" class="slides"></div>
+      <!-- Les blocs des équipes seront insérés ici dynamiquement -->
+    </div>
+    <p id="noTeamsMessage" style="display: none;">Tu n’as pas d’équipes pour l’instant</p>
+  </div>
+
+  <!-- Navigation mobile -->
+  <script src="Js/mobile-nav.js"></script>
+
+  <!-- Script pour le slideshow -->
+  <script type="module" src="Js/slideshow.js"></script>
+
+  <!-- Script externe pour la logique JavaScript -->
+  <script type="module" src="Js/index.js"></script>
+</body>
+</html>

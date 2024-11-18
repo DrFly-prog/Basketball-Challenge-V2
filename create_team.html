@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Créer une Équipe</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/mobile-nav.css">
+</head>
+<body>
+    <script src="Js/header.js"></script>
+    <script src="Js/mobile-nav.js"></script>
+  <div class="container">
+    <h2>Créer une Équipe</h2>
+    <form id="createTeamForm">
+      <label for="nom">Nom de l'équipe :</label>
+      <input type="text" id="nom" placeholder="Nom de l'équipe" required>
+
+      <label for="description">Description de l'équipe :</label>
+      <input type="text" id="description" placeholder="Description de l'équipe" required>
+
+      <button type="submit">Créer l'équipe</button>
+      <p id="teamMessage"></p>
+    </form>
+  </div>
+
+  <script type="module" src="Js/create_team.js"></script>
+</body>
+</html>

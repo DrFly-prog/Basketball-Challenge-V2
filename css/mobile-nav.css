@@ -1,0 +1,48 @@
+.mobile-nav {
+  max-width: 480px;
+  margin: 0 auto;
+  background: #F1F1F1; /* Couleur de fond */
+  position: fixed; /* Fixé en bas de l'écran */
+  bottom: 0;
+  left: 0; /* Toujours s'étendre depuis le bord gauche */
+  right: 0; /* Toujours s'étendre jusqu'au bord droit */
+  height: 65px; /* Hauteur fixe de la barre de navigation */
+  display: flex; /* Afficher les icônes côte à côte */
+  justify-content: space-around; /* Répartir les icônes de manière uniforme */
+  align-items: center; /* Centrer verticalement les icônes */
+  box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1); /* Ombre pour un effet visuel */
+  z-index: 100; /* Toujours visible au-dessus du contenu principal */
+}
+
+.bloc-icon {
+  display: flex; /* Permet l'alignement centré */
+  justify-content: center;
+  align-items: center;
+  width: 60px; /* Taille carrée pour chaque icône */
+  height: 60px;
+  border-radius: 50%; /* Rond pour un meilleur design */
+  background-color: white; /* Fond blanc autour des icônes */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Légère ombre pour les icônes */
+  transition: background-color 0.3s ease; /* Animation au hover */
+}
+
+.bloc-icon img {
+  width: 30px; /* Taille des icônes */
+  height: auto; /* Garder les proportions */
+}
+
+.bloc-icon:hover {
+  background-color: #e0e0e0; /* Changement de couleur au survol */
+}
+
+/* Responsiveness pour appareils très petits */
+@media (max-width: 360px) {
+  .bloc-icon {
+    width: 50px; /* Réduire la taille pour les écrans plus petits */
+    height: 50px;
+  }
+
+  .bloc-icon img {
+    width: 25px; /* Réduire la taille des images */
+  }
+}

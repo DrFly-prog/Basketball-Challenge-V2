@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profil - Basketball Challenge</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/mobile-nav.css">
+</head>
+<body>
+    <script src="Js/header.js"></script>
+    <script src="Js/mobile-nav.js"></script>
+  <div class="container">
+    <h2>Mon Profil</h2>
+    <form id="profileForm">
+      <label for="taille">Taille :</label>
+      <input type="text" id="taille" placeholder="Ex: 190 cm" required>
+
+      <label for="poste">Poste :</label>
+      <input type="text" id="poste" placeholder="Ex: Meneur" required>
+
+      <button type="submit">Enregistrer les modifications</button>
+      <p id="profileMessage"></p>
+    </form>
+
+    <!-- Formulaire pour rejoindre une équipe -->
+    <h3>Rejoindre une Équipe</h3>
+    <form id="joinTeamForm">
+      <label for="teamSelect">Choisissez une équipe :</label>
+      <select id="teamSelect" required>
+        <option value="" disabled selected>Choisissez une équipe</option>
+      </select>
+      <button type="submit">Rejoindre</button>
+      <p id="joinTeamMessage"></p>
+    </form>
+
+    <!-- Sélection pour associer un pseudo temporaire -->
+    <div id="existingPseudoContainer" style="display: none;">
+      <label for="existingPseudoSelect">Sélectionner un pseudo à associer :</label>
+      <select id="existingPseudoSelect"></select>
+      <button id="associatePseudoButton">Associer le Pseudo</button>
+    </div>
+
+    <h3>Mes Équipes</h3>
+    <ul id="userTeamsList"></ul>
+
+    <button id="logoutButton">Se déconnecter</button>
+  </div>
+
+  <script type="module" src="Js/profile.js"></script>
+</body>
+</html>

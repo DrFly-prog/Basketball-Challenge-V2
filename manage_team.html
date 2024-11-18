@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestion de l'Équipe</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/mobile-nav.css">
+</head>
+<body>
+    <script src="Js/header.js"></script>
+    <script src="Js/mobile-nav.js"></script>
+  <div class="container">
+    <h2>Gestion de l'Équipe</h2>
+    <h3 id="teamName">Nom de l'équipe</h3>
+    <p id="teamDescription">Description de l'équipe</p>
+
+    <h3>Membres de l'équipe</h3>
+    <ul id="teamMembersList"></ul>
+
+    <!-- Formulaire pour ajouter un membre, visible uniquement pour les administrateurs -->
+    <div id="addMemberContainer" style="display: none;">
+      <h3>Ajouter un Membre</h3>
+      <form id="addMemberForm">
+        <label for="memberPseudo">Pseudo :</label>
+        <input type="text" id="memberPseudo" required>
+        <button type="submit">Ajouter Membre</button>
+        <p id="addMemberMessage"></p>
+      </form>
+    </div>
+  </div>
+
+  <script type="module" src="Js/manage_team.js"></script>
+</body>
+</html>

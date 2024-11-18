@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Challenge</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/mobile-nav.css">
+</head>
+<body>
+    <script src="Js/header.js"></script>
+    <script src="Js/mobile-nav.js"></script>
+  <div class="container">
+    <h2 id="challengeName">Nom du Challenge</h2>
+    <p id="challengeDescription">Description du Challenge</p>
+
+    <!-- Tableau des scores -->
+    <h3>Tableau des Scores</h3>
+    <table id="scoreTable">
+      <thead>
+        <tr>
+          <th>Pseudo</th>
+          <th>Score</th>
+        </tr>
+      </thead>
+      <tbody id="scoreTableBody"></tbody>
+    </table>
+
+    <!-- Formulaire pour ajouter un point au vainqueur -->
+    <h3>Nouvelle Participation au Challenge</h3>
+    <form id="addScoreForm">
+      <label for="memberSelect">Sélectionner le Vainqueur :</label>
+      <select id="memberSelect" required></select>
+      <button type="submit">Ajouter un Point</button>
+      <p id="addScoreMessage"></p>
+    </form>
+  </div>
+
+  <script type="module">
+    import { checkUserAuth, addScore } from "./Js/challenge.js";
+
+    checkUserAuth();
+
+    document.getElementById("addScoreForm").addEventListener("submit", (event) => {
+      event.preventDefault();
+      const urlParams = new URLSearchParams(window.location.search);
+      const teamId = urlParams.get("teamId");
+      const challengeId = urlParams.get("challengeId");
+      addScore(teamId, challengeId);
+    });
+  </script>
+</body>
+</html>

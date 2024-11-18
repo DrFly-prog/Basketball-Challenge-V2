@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestion des Challenges</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/mobile-nav.css">
+</head>
+<body>
+    <script src="Js/header.js"></script>
+    <script src="Js/mobile-nav.js"></script>
+  <div class="container admin-container">
+    <h2>Gestion des Challenges</h2>
+    <p id="accessMessage"></p>
+
+    <!-- Formulaire de création de challenge -->
+    <h3>Créer un nouveau Challenge</h3>
+    <form id="createChallengeForm">
+      <label for="challengeName">Nom :</label>
+      <input type="text" id="challengeName" required>
+
+      <label for="challengeDescription">Description :</label>
+      <textarea id="challengeDescription" required></textarea>
+
+      <label for="challengeImage">Image (URL) :</label>
+      <input type="text" id="challengeImage" required>
+
+      <label for="challengeStatus">Statut :</label>
+      <select id="challengeStatus" required>
+        <option value="actif">Actif</option>
+        <option value="inactif">Inactif</option>
+      </select>
+
+      <button type="submit">Créer Challenge</button>
+      <p id="createChallengeMessage"></p>
+    </form>
+
+    <!-- Tableau de gestion des challenges -->
+    <h3>Liste des Challenges</h3>
+    <div id="challengeTableContainer">
+      <table id="challengeTable">
+        <thead>
+          <tr>
+            <th>Nom</th>
+            <th>Description</th>
+            <th>Image</th>
+            <th>Statut</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="challengeTableBody"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <script type="module" src="Js/admin_challenge_management.js"></script>
+</body>
+</html>

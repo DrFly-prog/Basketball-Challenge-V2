@@ -1,0 +1,43 @@
+{
+  "users": {
+    "userId1": {
+      "pseudo": "pseudo1",
+      "email": "email1@example.com",
+      "role": "membre",
+      "taille": "180 cm",
+      "poste": "Gardien"
+    },
+    "userId2": {
+      "pseudo": "pseudo2",
+      "email": "email2@example.com",
+      "role": "admin",
+      "taille": "190 cm",
+      "poste": "Attaquant"
+    }
+  },
+  "teams": {
+    "teamId1": {
+      "nom": "Équipe A",
+      "description": "Description de l'équipe A",
+      "actif": true,
+      "membres": {
+        "userId1": true,
+        "userId2": true
+      }
+    }
+  },
+  "challenges": {
+    "challengeId1": {
+      "nom": "Challenge 1",
+      "description": "Premier challenge",
+      "actif": true,
+      "image": "URL de l'image"
+    }
+  },
+  "scores": {
+    "teamId1": {
+      "userId1": 10,
+      "userId2": 5
+    }
+  }
+}

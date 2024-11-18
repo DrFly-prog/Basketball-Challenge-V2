@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test - Configuration Firebase</title>
+</head>
+<body>
+  <h1>Test de Configuration Firebase</h1>
+  
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
+    import { getAuth } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-auth.js";
+    import { getDatabase } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js";
+
+  const firebaseConfig = {
+    apiKey: "test_api_key",
+    authDomain: "test_project_id.firebaseapp.com",
+    projectId: "test_project_id",
+    storageBucket: "test_project_id.appspot.com",
+    messagingSenderId: "test_messaging_sender_id",
+    appId: "test_app_id",
+    databaseURL: "https://test-project-id-default-rtdb.europe-west1.firebasedatabase.app"
+  };
+
+    // Test de l'initialisation de Firebase
+    try {
+      const app = initializeApp(firebaseConfig);
+      console.log("Firebase initialisé avec succès :", app);
+    } catch (error) {
+      console.error("Erreur d'initialisation Firebase :", error);
+    }
+  </script>
+</body>
+</html>

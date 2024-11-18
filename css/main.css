@@ -1,0 +1,155 @@
+/* Importation de la police Roboto */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/* Réinitialisation des styles de base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Configuration globale pour limiter la taille du body */
+body {
+  max-width: 480px; /* Largeur maximale correspondant à un format mobile */
+  margin: 0 auto; /* Centrer le contenu sur les écrans plus larges */
+  padding: 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+}
+
+/* Configuration globale pour limiter la taille du body et centrer l'application */
+body {
+  max-width: 480px; /* Largeur maximale correspondant à un format mobile */
+  height: 100vh; /* Assurer que le body prend toute la hauteur de l'écran */
+  margin: 0 auto; /* Centrer le contenu horizontalement */
+  padding: 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between; /* Centrer verticalement le contenu si besoin */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Optionnel : ombre autour de l'application */
+  border-radius: 10px; /* Arrondir les coins pour simuler un écran de mobile */
+  overflow: hidden; /* Empêcher le contenu de déborder */
+}
+
+/* Ajout d'un fond gris en dehors du rectangle pour un effet visuel */
+html {
+  background-color: #2C2725; /* Fond extérieur (différent de l'application elle-même) */
+}
+
+/* Définition des couleurs globales */
+:root {
+  --primary-color: #FD9105; /* Vert primaire */
+  --secondary-color: #2C2725; /* Jaune secondaire */
+  --accent-color: #73706F; /* Rouge accent */
+  --background-color: #101313; /* Gris clair */
+  --text-color: #DEE1E2; /* Texte principal */
+  --light-text-color: #525151; /* Texte secondaire */
+  --border-color: #2C2725; /* Couleur des bordures */
+}
+
+/* Ajustement des paddings pour le conteneur principal */
+.container {
+  width: 100%; /* Utiliser toute la largeur du rectangle */
+  padding: 20px;
+  box-sizing: border-box; /* Inclure les bordures et le padding dans la largeur */
+}
+
+button {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button.primary {
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 5px;
+}
+
+button.primary:hover {
+  background-color: #388E3C; /* Teinte plus sombre pour le hover */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--accent-color);
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: #E64A19; /* Couleur hover */
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+/* Images et médias */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Responsivité */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  .container {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  button {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  .container {
+    padding: 10px;
+  }
+
+  button {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+}

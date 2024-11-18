@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Détails de l'Équipe</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/mobile-nav.css">
+</head>
+<body>
+    <script src="Js/header.js"></script>
+    <script src="Js/mobile-nav.js"></script>
+  <div class="container">
+    <h2 id="teamName">Nom de l'équipe</h2>
+    <p id="teamDescription">Description de l'équipe</p>
+
+    <!-- Bouton pour aller vers le leaderboard -->
+    <button id="leaderboardButton">Voir le Classement</button>
+
+    <h3>Challenges Actifs</h3>
+    <div id="activeChallengesContainer"></div>
+  </div>
+
+  <script type="module">
+    import { setupLeaderboardButton, loadTeamDetails } from "./Js/team_details.js";
+
+    setupLeaderboardButton();
+    loadTeamDetails();
+  </script>
+</body>
+</html>

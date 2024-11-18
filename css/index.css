@@ -1,0 +1,42 @@
+.titre-intro {
+	text-align: center;
+}
+
+.text-intro {
+	text-align: center;
+}
+
+.teams-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Espacement entre les blocs */
+}
+
+.team-block {
+  background-color: var(--background-color);
+  padding: 15px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.team-block h4 {
+  margin: 0 0 10px;
+  color: var(--primary-color);
+}
+
+.team-block p {
+  margin: 0 0 10px;
+  color: var(--text-color);
+}
+
+.team-link {
+  text-decoration: none;
+  color: var(--accent-color);
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.team-link:hover {
+  color: darken(var(--accent-color), 10%);
+}
